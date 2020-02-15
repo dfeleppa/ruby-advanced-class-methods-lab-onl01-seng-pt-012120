@@ -43,9 +43,8 @@ class Song
   def self.new_from_filename(filename)
     split_file = filename.split(" - ")
     artist = split_file[0]
-    #song_name = split_file[1].strip(".mp3")
-    #split_file[1].basename('public/500.html', '.html')
-    song_name = split_file[1].basename(split_file[1], 'html')
+    song_name, extension = split_file[1].strip(".")
+ 
     
     song = self.new 
     song.artist_name = artist 
