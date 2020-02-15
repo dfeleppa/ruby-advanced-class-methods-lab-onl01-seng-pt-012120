@@ -54,10 +54,10 @@ class Song
   end
 
   def self.create_from_filename
+    split_file = filename.split(" - ")
+    artist = split_file[0]
+    song_name, mp3 = split_file[1].split(".mp3")
  
-     title = filename.split(" - ")
-    artist = title[0]
-     song_name, extension = title[1].split(".")
 
     song = self.create 
     song.artist_name = artist 
