@@ -47,3 +47,4 @@ class Song
     song.name = title.scan(/\w+[^-]+\w+[^.]/)[1]
     song 
   end
+end
