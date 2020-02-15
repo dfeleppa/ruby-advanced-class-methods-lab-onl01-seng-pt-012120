@@ -44,6 +44,7 @@ class Song
     split_file = filename.split(" - ")
     artist = split_file[0]
     song_name = split_file[1].strip(".mp3")
+    File.basename(file,File.extname(file)) # => "my_file"
 
     song = self.new 
     song.artist_name = artist 
