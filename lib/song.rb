@@ -1,3 +1,4 @@
+require 'pry'
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -42,9 +43,7 @@ class Song
 
   def self.new_from_filename(filename)
     song = self.new 
-    title = filename.gsub(/\w+[^-]\z/, "")
-    song.artist_name = title.scan(/\w+[^-]/)[0].strip
-    song.name = title.scan(/\w+[^-]+\w+[^.]/)[1]
+    binding.pry
     song 
   end
 end
